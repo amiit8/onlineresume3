@@ -17,7 +17,8 @@ $(document).ready(function(){
 
 	slideshow.on('click', function(event){
 		if(event.target.id === 'slideshow'){
-			slideshow.hide();
+			slideshow.fadeOut();
+			$('body').removeClass('modal-open');
 		}
 	});
 
@@ -36,9 +37,13 @@ $(document).ready(function(){
 
 		slideshowView.$el.slideDown();
 
+		$('body').addClass('modal-open');
+
 		closeButton = $('#slideshow .button.close');
 		closeButton.on('click', function(){
+			$('body').removeClass('modal-open');
 			slideshow.slideUp();
+
 		});
 	});
 });
