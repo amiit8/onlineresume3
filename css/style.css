@@ -36,9 +36,14 @@ h3{
 .banner{
 	color: white;
 }
+
+.banner .blank-div{
+	height: 100px;
+	width: 100%;
+}
 #banner-container {
 	/*height: 650px;*/
-	padding-top: 200px;
+	padding-top: 100px;
 }
 
 .profile-image img{
