@@ -1,0 +1,369 @@
+
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Amit Upadhyay</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway" rel="stylesheet">
+		
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+		
+		<div id="resume" >
+
+			<!-- Heading and Menu -->
+			<!-- <div id="header"></div> -->
+
+			<!-- Banner Section -->
+			<section class="banner" id="banner"></section>
+
+			<!-- To align banner and menu -->
+			<div class="clear-float"></div>
+
+			<!-- Menu Section -->
+			<section class="menu" id="menu"></section>
+
+			<!-- Summary section -->
+			<section class="section" id="summary"></section>
+
+			<!-- Skilld section -->
+			<section class="section" id="skills"></section>
+
+			<!-- Toolset section -->
+			<section class="section" id="toolset"></section>
+
+			<!-- Technologies Section -->
+			<!-- <section class="section" id="tech"></section> -->
+
+			<!-- Experience Section -->
+			<!-- <section class="section" id="experience"></section> -->
+
+			<!-- Education Section -->
+			<section class="section" id="education"></section>
+			
+			<!-- Future Section -->
+			<!-- <div class="section" id="future"></div> -->
+
+			<!-- Achievements Section -->
+			<!-- <section class="section" id="achievements"></section> -->
+
+			<!-- Projects Section -->
+			<section class="section" id="projects"></section>
+
+			<!-- Contact Section -->
+			<section class="section" id="contact"></section>
+
+			<!-- Footer Section -->
+			<section class="section" id="footer">
+				<div class="container text-center">
+					<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+					<ul>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+					</ul>
+					<p>2016 <a target="_blank" href="http://amitupadhyay.in/" title="Amit Upadhyay | UI Developer">amitupadhyay.in</a>. All Rights Reserved.
+					</p>
+				</div>
+			</section>
+		</div>
+
+
+		<!-- Templates for the sections -->
+
+			<!-- Summary Template -->
+			<script id="summaryTemplate" type="text/template">
+				<div class="container">
+					<div class="heading text-center">
+						<h2><%= title %></h2>
+						<h3><%= data.text %></h3>
+					</div>
+					<div class="row text-center">
+						<% _.each(data.slides, function(item){ %>
+							<div class="slides col-sm-4">
+								<div>
+									<img src="<%= item.image %>" />
+									<a href="<%= item.link %>"></a>
+									<h4><%= item.title %></h4>
+									<p><%= item.description %></p>
+								</div>
+							</div>
+						<% }) %>
+					</div>
+				</div>
+			</script>
+
+			<!-- Banner Template -->
+			<script id="infoTemplate" type="text/template">
+				<div class="background">
+					<div id="banner-container" class="container text-center">
+						<a class="profile-image">
+							<img src="<%= data.profileImage %>" />
+						</a>
+						<div class="profile-data">
+							<div class="name header"><%= data.name %></div>
+						</div>
+					</div>
+				</div>
+			</script>
+
+			<!-- Menu Template -->
+			<script id="menuTemplate" type="text/template">
+		  	<div class="navbar-wrapper sticky-menu">
+		  		<div class="">
+		  			<div class="navwrapper">
+		  				<div class="navbar navbar-inverse">
+		  					<div class="container">
+		  						<div class="navbar-header">
+  									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+  										<span class="sr-only">Toggle navigation</span>
+  										<span class="icon-bar"></span>
+  										<span class="icon-bar"></span>
+  										<span class="icon-bar"></span>
+  									</button>
+  									<div class="navbar-brand">
+  										<a href="#banner-container">
+  									  	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+  									  </a>
+  									</div>
+		  						</div>
+		  						<div class="navArea">
+		  							<div id="navbar" class="navbar-collapse collapse">
+		  								<ul class="nav navbar-nav">
+		  									<% _.each(this.model.attributes, function(item,key){ %>
+			  									<% if (item.menu === true) {%>
+				  									<li class="menuItem">
+				  										<a href="#<%= key %>"><%= item.title %></a>
+				  									</li>
+			  									<% } %>
+		  									<% }) %>
+		  								</ul>
+		  							</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  	</div>
+			</script>
+
+			<!-- Skills/Tools/Technologies Template -->
+			<script id="skillsTemplate" type="text/template">
+				<div class="container">
+					<div class="heading text-center">
+						<h2><%= title %></h2>
+						<h3><%= description %></h3>
+					</div>
+					<hr />
+					<div class="row">
+						<div class="col-sm-6">
+							<% _.each(data, function(item){ %>
+								<div class="skill">
+									<div class="skill-wrapper">
+										<!-- <img class="image" src="<%= item.image %>"></img> -->
+										<h4 class="skill-name"><%= item.name %></h4>
+										<h5 class="experience"><%= item.experience %> months </h5>	
+				
+										<% if(item.proficiency){ %>
+										<div class="progress">
+										  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= item.proficiency %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= item.proficiency %>%"></div>
+										</div>
+										<% } %>
+									</div>	
+
+								</div>
+							<% }); %>
+						</div>
+						<div class="col-sm-6 skills-image">
+							<img src="./images/<%= image %>">
+						</div>
+					</div>
+					<div class="clear-float"></div>
+				</div>
+			</script>
+			
+			<!-- Tools Template -->
+			<script id="toolsTemplate" type="text/template">
+				<div class="container">
+					<div class="heading text-center">
+						<h2><%= title %></h2>
+						<h3><%= description %></h3>
+					</div>
+					<hr />
+					<div class="row">
+						<% _.each(data, function(item){ %>
+							<div class="col-lg-2 col-xs-6 col-sm-3 text-center">
+								<div class="image toolset-image">
+									<img src="./images/<%= item.image %>">
+								</div>
+								<h4><%= item.name %></h4>
+								<p><%= item.text %></p>
+							</div>
+						<% }) %>
+					</div>
+				</div>
+			</script>
+			<!-- Future Template -->
+			<script id="futureTemplate" type="text/template">
+				<div class="container">
+					<div class="title-wrapper">
+						<span class="glyphicon <%= typeof(icon) !== 'undefined' ? icon : 'glyphicon-pencil' %>" aria-hidden="false"></span>
+						<span class="title"><%= title %></span>
+					</div>
+					<hr />
+					<ul class="items">
+					<% _.each(data, function(item){ %>
+						<li class="item"><%= item %></li>
+					<% }); %>
+					</ul>
+				</div>
+			</script>
+
+			<!-- Achievements Template -->
+			<script id="achievementsTemplate" type="text/template">
+				<div class="container">
+					<div class="title-wrapper">
+						<span class="glyphicon <%= typeof(icon) !== 'undefined' ? icon : 'glyphicon-pencil' %>" aria-hidden="false"></span>
+						<span class="title"><%= title %></span>
+					</div>
+					<hr />
+					<ul class="items">
+					<% _.each(data, function(item){ %>
+						<li class="item"><%= item %></li>
+					<% }); %>
+					</ul>
+				</div>
+			</script>
+
+			<!-- Education Template -->
+			<script id="educationTemplate" type="text/template">
+				<div class="container">
+					<div class="heading text-center">
+						<h2><%= title %></h2>
+						<h3><%= description %></h3>
+					</div>
+					<hr />
+					<ul class="items">
+					<% _.each(data, function(item){ %>
+						<li class="item col-md-4 text-center">
+							<h4 class="col1 year"><%= item.degree %></h4>
+							<h5 class="col2 description"><%= item.year %></h5>
+							<img src="./images/<%= item.image %>">
+							<p class="col3 percentage"><%= item.description %></p>
+						</li>
+					<% }); %>
+					</ul>
+				</div>
+			</script>
+
+			<!-- Experience Template -->
+			<script id="experienceTemplate" type="text/template">
+				<div class="container">
+					<div class="heading text-center">
+						<h2><%= title %></h2>
+						<h3><%= description %></h3>
+					</div>
+					<hr />
+					<ul class="items">
+					<% _.each(data, function(item){ %>
+						<li class="item">
+							<div class="col1 tenure"><%= getTenure(item.startDate, item.endDate)%></div>
+							<div class="col2 designation"><%= item.designation %></div>
+							<div class="col3 company-name"><%= item.companyName %></div>
+						</li>
+					<% }); %>
+					</ul>
+				</div>
+			</script>
+
+			<!-- Projects Template -->
+			<script id="projectsTemplate" type="text/template">
+				<div class="container">
+					<div class="heading text-center">
+						<h2><%= title %></h2>
+						<h3><%= description %></h3>
+					</div>
+
+					<ul class="grid">
+						<% _.each(data, function(item){ %>
+							<li class="col-md-3 col-sm-6 col-xs-12">
+								<div class="card">
+									<div class="image">
+										<img src="./images/<%= item.image %>">
+									</div>
+									<div class="caption">
+										<h4><%= item.projectName%></h4>
+										<h6><%= item.description %></h6>
+									</div>
+								</div>
+							</li>
+						<% }); %>
+					</ul>
+				</div>
+			</script>
+
+			<!-- Contact Template -->
+			<script id="contactTemplate" type="text/template">
+				<div class="container">
+					<div class="heading text-center">
+						<h2><%= title %></h2>
+						<h3><%= description %></h3>
+					</div>
+				</div>
+				<div class="container">
+				<div class="row">
+					<div class="col-md-6">Map</div>
+					<div class="col-md-6">
+						<h4><%= subTitle %></h4>
+						<h5><%= text %></h5>
+						<ul>
+							<% _.each(data, function(item,key){ %>
+								<li>
+									<h4><%= item %></h4>
+								</li>
+							<% }) %>
+						</ul>
+					</div>
+				</div>
+				</div>
+				<div class="container">
+					<form method="post" action="contact.php" id="contactform">
+					  <input name="name" type="text" class="contact col-sm-6" placeholder="Name *">
+					  <input name="email" type="email" class="contact noMarr col-sm-6" placeholder="E-mail address *">
+					  <textarea name="comment" class="contact col-xs-12" placeholder="Message *"></textarea>
+					  <input type="submit" id="submit" class="contact submit" value="Send message">
+					</form>
+				</div>
+			</script>
+
+			<!-- Libraries Scripts  -->
+			<script type="text/javascript" src="./lib/underscore.js"></script>
+			<script type="text/javascript" src="./lib/jquery.js"></script>
+			<script type="text/javascript" src="./lib/backbone.js"></script>
+			<script type="text/javascript" src="./lib/bootstrap.min.js"></script>
+
+			<!-- Finally load the project scripts after all other scripts are downloaded -->
+
+			<!-- Complete data available as json object -->
+			<script type="text/javascript" src="./scripts/resumeData.js"></script>
+
+			<!-- Create backbone views and models -->
+			<script type="text/javascript" src="./scripts/script.js"></script>
+
+			<!-- Effects on document scroll -->
+			<script type="text/javascript" src="./scripts/scrollmenu.js"></script>
+
+			<!-- Messages for the browser's console -->
+			<script type="text/javascript" src="./scripts/console.js"></script>
+
+			<!-- Setup heights at initializing time for the background image -->
+			<script type="text/javascript" src="./scripts/setupHeights.js"></script>
+
+			<!-- Setup Smoothscroll on click of menu items and home button -->
+			<script type="text/javascript" src="./scripts/smoothscroll.js"></script>
+		</body>
+</html>
