@@ -24,6 +24,7 @@ $(document).ready(function(){
 		if(	bodyScrollPosition > summaryOffsetPosition - 50 ){
 			stickymenu.css("position", "fixed");
 			menu.addClass('fixed');
+			menu.find('.navbar-brand').fadeIn();
 
 			// When the scrolled position is between summary section and skills section
 			if(bodyScrollPosition >= summaryOffsetPosition && bodyScrollPosition < skillsOffsetPosition){
@@ -62,6 +63,7 @@ $(document).ready(function(){
 			stickymenu.css("position", "relative");
 			menu.removeClass('fixed');
 			menuItems.removeClass('active');
+			menu.find('.navbar-brand').fadeOut();
 		}
 	});
 });

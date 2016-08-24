@@ -46,7 +46,7 @@ var resume_data = {
 	},
 	skills : {
 		title : 'Skills',
-		description : 'Learning never ends. There will always be something that you need to learn. Although I find myself getting dirty with these',
+		description : 'Learning never ends. There will always be something that you need to learn. I find myself working with these..',
 		menu : true,
 		icon : 'glyphicon-briefcase',
 		image : 'interface.png',
@@ -87,36 +87,42 @@ var resume_data = {
 				name : 'Sublime',
 				experience : 24,
 				image : 'sublime.png',
+				website : 'https://www.sublimetext.com/',
 				text : 'Awsome and simple editor. The closest you can get to an IDE at such a low size'
 			},
 			{
 				name : 'Git',
 				experience : 24,
 				image : 'git.png',
+				website : 'https://git-scm.com/',
 				text : 'Ofcourse, there is SVN, Perforce etc. But git takes repository management to another level'
 			},
 			{
 				name : 'Eclipse',
 				experience : 24,
 				image : 'eclipse.png',
+				website:'https://eclipse.org/',
 				text : 'The most popular and free IDE that comes with long term support'
 			},
 			{
 				name : 'Jira',
 				experience : 24,
 				image : 'jira.png',
+				website : 'https://www.atlassian.com/software/jira',
 				text : 'A very intuitive project management tool. Integrates with git easily'
 			},
 			{
 				name : 'Node',
 				experience : 12,
 				image : 'node.png',
+				website : 'https://nodejs.org/',
 				text : 'Node has made javascript even more powerful. With npm its a breeze to use libraries'
 			},
 			{
 				name : 'Developer Tools',
 				experience : 12,
 				image : 'chrome.png',
+				website : 'https://developers.google.com/web/tools/chrome-devtools/?hl=en',
 				text : 'Firefox or chrome : Its always a personal choice. Being a UI developer you need to pick yours'
 			}
 		]
@@ -232,6 +238,7 @@ var resume_data = {
 		menu :true,
 		data : [
 			{
+				id : 1,
 				projectName : 'Supply Chain Product',
 				description : 'Complete supply chain management from order to shipment',
 				image : 'warehouse.jpg',
@@ -246,6 +253,7 @@ var resume_data = {
 				duration : 12
 			},
 			{
+				id : 2,
 				projectName : 'Online portfolio',
 				description : 'A small project to keep my online presence',
 				image : 'portfolio.png',
@@ -259,6 +267,7 @@ var resume_data = {
 				duration : 12
 			},
 			{
+				id : 3,
 				projectName : 'Ecommerce Web Portal',
 				description : 'A Liferay based configurable ecommerce platform',
 				image : 'shopping.jpg',
@@ -273,6 +282,7 @@ var resume_data = {
 				duration : 12
 			},
 			{
+				id : 4,
 				projectName : 'Customer Data Management Application',
 				description : 'Banking',
 				image : 'banking.jpg',

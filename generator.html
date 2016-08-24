@@ -72,6 +72,9 @@
 			</section>
 		</div>
 
+		<!-- Slideshow Section -->
+		<section id="slideshow"></section>
+
 
 		<!-- Templates for the sections -->
 
@@ -197,11 +200,14 @@
 					<div class="row">
 						<% _.each(data, function(item){ %>
 							<div class="col-lg-2 col-xs-6 col-sm-3 text-center">
-								<div class="image toolset-image">
-									<img src="./images/<%= item.image %>">
-								</div>
-								<h4><%= item.name %></h4>
-								<p><%= item.text %></p>
+								<a href="<%= item.website %>">
+									<div class="image toolset-image">
+										<img src="./images/<%= item.image %>">
+									</div>
+									<h4><%= item.name %></h4>
+								</a>
+									<p><%= item.text %></p>
+								
 							</div>
 						<% }) %>
 					</div>
@@ -289,9 +295,9 @@
 					</div>
 
 					<ul class="grid">
-						<% _.each(data, function(item){ %>
+						<% _.each(data, function(item,key){ %>
 							<li class="col-md-3 col-sm-6 col-xs-12">
-								<div class="card">
+								<div class="card" data-index="<%= key %>">
 									<div class="image">
 										<img src="./images/<%= item.image %>">
 									</div>
@@ -340,6 +346,25 @@
 				</div>
 			</script>
 
+			<!-- Slideshow Template -->
+			<script id="slideshowTemplate" type="text/template">
+				<div class="slideshow-container">
+					<div class="wrapper">
+						<div class="button close">
+							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+						</div>
+						<div class="col-sm-6 col-xs-12 image-container">
+							<img src="./images/<%= image %>">
+						</div>
+						<div class="col-sm-6 col-xs-12">
+							<h4><%= projectName %></h4>
+							<p><%= responsibilities %></p>
+						</div>
+						<div class="clear-float"></div>
+					</div>
+				</div>	
+			</script>
+
 			<!-- Libraries Scripts  -->
 			<script type="text/javascript" src="./lib/underscore.js"></script>
 			<script type="text/javascript" src="./lib/jquery.js"></script>
@@ -365,5 +390,8 @@
 
 			<!-- Setup Smoothscroll on click of menu items and home button -->
 			<script type="text/javascript" src="./scripts/smoothscroll.js"></script>
+
+			<!-- Add slideshow functionality to projects -->
+			<script type="text/javascript" src="./scripts/slideshowView.js"></script>
 		</body>
 </html>

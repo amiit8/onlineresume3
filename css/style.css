@@ -105,6 +105,10 @@ section .container .heading {
 	bottom:inherit;
 }
 
+#menu .navbar-brand{
+	display: none;
+}
+
 .fixed .navbar-nav{
 	padding:0;
 }
@@ -149,6 +153,12 @@ section .container .heading {
 .toolset-image img{
 	height: 100px;
 	width: 100px;
+	padding: 5px;
+}
+
+.toolset-image img:hover {
+  border: 2px solid black;
+  opacity: .8;
 }
 
 .grid .card{
@@ -249,4 +259,42 @@ input.contact{
 
 #footer .glyphicon-chevron-up:hover{
 	background-color: orange;
+}
+
+#slideshow{
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+}
+
+#slideshow .image-container{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: 100%;
+}
+#slideshow img{
+	width: 100%;
+	height: 100%;
+}
+#slideshow .button.close{
+	position: absolute;
+  right: 0;
+  color: white;
+  z-index: 999;
+  opacity: 1;
+}
+.slideshow-container .wrapper{
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ddd;
+	overflow: auto;
+	height: 75%;
+	width: 80%;
+	background-color: black;
+	color: white;
+	position: relative;
 }
