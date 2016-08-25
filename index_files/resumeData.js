@@ -241,14 +241,11 @@ var resume_data = {
 				id : 1,
 				projectName : 'Supply Chain Product',
 				description : 'Complete supply chain management from order to shipment',
-				image : 'warehouse.jpg',
+				image : 'delivery.jpg',
 				responsibilities : [
-					'Developing standalone widgets on Liferay portal with Backbone.js',
-					'Using backbone channels to communicate between different widgets',
-					'Using Git as code repository to checkout and commit code changes',
-					'Consuming Rest Services to fetch and update data via web services',
-					'Developing widgets using Ajile methodology with jira',
-					'Implementing responsive design with css and javascript'
+					'The product enables the customer(basically large enterprises) to manage their stocks efficiently and also decrease wastage using several mechanisms such as forecasting',
+					'The appliction uses java services as a backend.',
+					'My role in this project was to create User Interfaces using ExtJS and company developed platform. For different clients the application needs to be customnized to adhere to their requirements.'
 				],
 				duration : 12
 			},
@@ -258,11 +255,10 @@ var resume_data = {
 				description : 'A small project to keep my online presence',
 				image : 'portfolio.png',
 				responsibilities : [
-					'Single Page app to showcase my work and skills',
-					'Using marionette to create the whole application',
-					'Deployed on free hosting',
-					'Used bootstrap for responsive design and inbuilt styles',
-					'Optimizing and ugly-fying code for deployment with r.js'
+					'This is a small project for my online profile. This would serve as a playground for me to test various code snippets.',
+					'I have tried to use minimal libraries and create most of the effects using jquery and css directly',
+					'The libraries used in this project are Bootstrap for responsive design, jquery for dom operations, backbone and underscore for generating html markup from raw json data.',
+					'First the json data is converted into html markup. This markup is then deployed to the server as Search engines are not able to index the data if it is generated at runtime.'
 				],
 				duration : 12
 			},
@@ -272,12 +268,9 @@ var resume_data = {
 				description : 'A Liferay based configurable ecommerce platform',
 				image : 'shopping.jpg',
 				responsibilities : [
-					'Developing standalone widgets on Liferay portal with Backbone.js',
-					'Using backbone channels to communicate between different widgets',
-					'Using Git as code repository to checkout and commit code changes',
-					'Consuming Rest Services to fetch and update data via web services',
-					'Developing widgets using Ajile methodology with jira',
-					'Implementing responsive design with css and javascript'
+					'The product is a highly configurable ecommerce platform which can be used by several customers. The backend was based on Amazon Webservices and hence many customers can integrate their data using Amazon cloud without managing the hardware.',
+					'My role here was to develop UI widgets which would be configurable by the administrator.',
+					'Marionette and Backbone was used to create the structure and views at runtime using data from the rest services, while handlebars was used as a templating framework.'
 				],
 				duration : 12
 			},

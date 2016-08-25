@@ -13,7 +13,13 @@
 		<link rel="stylesheet" href="./css/style.css">
 	</head>
 	<body>
-		
+		<div id="loader">
+			<div class="loader-wrapper">
+				<div class="loader-container">
+					<div class="loader-main"></div>
+				</div>
+			</div>
+		</div>		
 		<div id="resume" >
 
 			<!-- Heading and Menu -->
@@ -362,7 +368,9 @@
 						</div>
 						<div class="col-sm-6 col-xs-12">
 							<h4><%= projectName %></h4>
-							<p><%= responsibilities %></p>
+							<% _.each(responsibilities, function(item){ %>
+								<p><%= item %></p>
+							<% }) %>
 						</div>
 						<div class="clear-float"></div>
 					</div>

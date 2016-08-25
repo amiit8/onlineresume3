@@ -6,4 +6,13 @@ $(document).ready( function(){
 	banner.css('height',window.innerHeight);
 
 	// var sections = $('section.section');
+
+	// var loader = $('#loader');
+	// loader.fadeOut();
 });
+
+window.onload = function(){
+	var loader = $('#loader');
+	loader.fadeOut();
+	console.log('hiding');
+};
