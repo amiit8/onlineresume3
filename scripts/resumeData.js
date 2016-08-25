@@ -49,7 +49,7 @@ var resume_data = {
 		description : 'Learning never ends. There will always be something that you need to learn. I find myself working with these..',
 		menu : true,
 		icon : 'glyphicon-briefcase',
-		image : 'interface.png',
+		image : 'skills.jpg',
 		data : [
 			{
 				name : 'Javascript',

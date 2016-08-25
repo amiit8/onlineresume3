@@ -1,11 +1,17 @@
 
+// This script converts the raw json data to html dom using backbone and underscore. 
+// The views do not contain any functionality here
+// The purpose of using backbone here is to generate the html markup from json
+
+
+// Base View which can be extended by other views to inherit helper functions
 var BaseView = Backbone.View.extend({
 	helperFunctions : {
 		getTenure : function(startDate, endDate){
 			var start = new Date(startDate);
 			var end = new Date(endDate);
 			var endMsg;
-			const Months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+			var Months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 			var startMsg = Months[start.getMonth()] + ' ' + start.getFullYear();
 			if(end.toJSON() !== null){
 				endMsg = ' to ' + Months[end.getMonth()] + ' ' + end.getFullYear();
@@ -20,20 +26,36 @@ var BaseView = Backbone.View.extend({
 		var data = this.model.toJSON();
 		_.extend(data, this.helperFunctions);
 		this.$el.html(this.template(data));
-		console.info(this);
+		// console.info(this);
 	}
 });
 
+
 // Info View
 var InfoView = BaseView.extend({
-	el: '#header',
+	el: '#banner',
 	template : _.template( $('#infoTemplate').html() ),
+	ui : {
+
+	}
 });
 
 var infoModel = new Backbone.Model(resume_data.basicInfo);
 
 var infoView = new InfoView({
 	model : infoModel
+});
+
+// Menu View
+var MenuView = BaseView.extend({
+	el: '#menu',
+	template : _.template( $('#menuTemplate').html() ),
+});
+
+var menuModel = new Backbone.Model(resume_data);
+
+var menuView = new MenuView({
+	model: menuModel
 });
 
 
@@ -55,7 +77,7 @@ var SkillsView = BaseView.extend({
 	template : _.template( $('#skillsTemplate').html() ),
 });
 
-var skillsModel = new Backbone.Model(resume_data.skillset);
+var skillsModel = new Backbone.Model(resume_data.skills);
 
 var skillsView = new SkillsView({
 	model : skillsModel
@@ -64,7 +86,7 @@ var skillsView = new SkillsView({
 // Toolset View
 var ToolsetView = BaseView.extend({
 	el: '#toolset',
-	template : _.template( $('#skillsTemplate').html() ),
+	template : _.template( $('#toolsTemplate').html() ),
 });
 
 var toolsetModel = new Backbone.Model(resume_data.toolset);
@@ -145,6 +167,19 @@ var projectsView = new ProjectsView({
 	model : projectsModel
 });
 
+// Contact View
+var ContactView = BaseView.extend({
+	el: '#contact',
+	template : _.template( $('#contactTemplate').html() ),
+});
+
+var contactModel = new Backbone.Model(resume_data.contact);
+
+var contactView = new ContactView({
+	model : contactModel
+});
+
+// Render the views
 infoView.render();
 summaryView.render();
 skillsView.render();
@@ -155,26 +190,6 @@ educationView.render();
 futureView.render();
 achievementsView.render();
 projectsView.render();
-
-// var resumeTemplate = '<div class="view"> Name : <%= basicInfo.data.name %></div>';
-
-// var ResumeView = Backbone.View.extend({
-// 	el: '#resume',
-// 	template:_.template(resumeTemplate),
-// 	render: function(){
-// 		this.$el.html(this.template(this.model.attributes));
-// 	}
-// });
-
-// var ResumeModel = Backbone.Model.extend();
-
-// // construct model with resume data
-// var resumeModel = new ResumeModel(resume_data);
-
-// // construct view and pass model
-// var resumeView = new ResumeView({model:resumeModel});
-
-// // render the view
-// resumeView.render();
-
+contactView.render();
+menuView.render();
 

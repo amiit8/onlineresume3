@@ -1,11 +1,15 @@
+
+
+// Complete data available in one variable
 var resume_data = {
 	basicInfo : {
 		title : 'Basic Information',
+		menu : false,
 		description :'',
 		data : {
 			name : 'Amit Upadhyay',
 			email : 'amit.upadhyay@outlook.com',
-			phone : '+91-9833188838/+91-9765868838', 
+			phone : '+91-9833188838', 
 			website : 'www.amitupadhyay.in',
 			profileImage : './images/profileImage.jpg'
 		}
@@ -13,39 +17,45 @@ var resume_data = {
 	summary : {
 		title : 'About me',
 		description : '',
+		menu : true,
 		icon : 'glyphicon-user',
 		data : {
-			text : 'UI developer with 4+ years experience in Javascript, HTML5, CSS3, jQuery, Responsive Design, Backbone'
+			text : 'Hi there, I am primarily a UI Developer with some experience in backend. Most of my time goes into converting the designs(Illustrations and Images) into reality(Working Html and Javascript code). I believe in code quality, not quantity.',
+			slides : [
+				{
+					link:'#',
+					title: 'HTML 5',
+					image: './images/html5.png',
+					description: 'HTML is the thing'
+				},
+				{
+					link:'#',
+					title: 'Javascript',
+					image: './images/javascript.png',
+					description: 'Javascript'
+				},
+				{
+					link:'#',
+					title: 'Frameworks',
+					image: './images/marionette.png',
+					description: 'JS Frameworks'
+				},
+
+			]
 		}
 	},
-	skillset : {
+	skills : {
 		title : 'Skills',
-		description : 'I work with the below technologies',
+		description : 'Learning never ends. There will always be something that you need to learn. I find myself working with these..',
+		menu : true,
 		icon : 'glyphicon-briefcase',
+		image : 'skills.jpg',
 		data : [
 			{
 				name : 'Javascript',
 				proficiency : 90,
 				experience : 24,
 				image : './images/javascript.png'
-			},
-			{
-				name : 'Backbone js',
-				proficiency : 90,
-				experience : 12,
-				image : './images/backbone.png'
-			},
-			{
-				name : 'Marionette',
-				proficiency : 85,
-				experience : 12,
-				image : './images/marionette.png'
-			},
-			{
-				name : 'JQuery',
-				proficiency : 80,
-				experience : 24,
-				image : './images/jquery.png'
 			},
 			{
 				name : 'Html',
@@ -59,37 +69,61 @@ var resume_data = {
 				experience : 24,
 				image : './images/css.png'
 			},
+			{
+				name : 'SQL',
+				proficiency : 70,
+				experience : 24,
+				image : './images/sql.png'
+			},
 		]
 	},
 	toolset : {
 		title : 'Tools',
-		description : 'I work with the below technologies',
+		description : 'In this ever-changing technological world you always need some powerful weapons by your side; My ammunition set includes',
 		icon : 'glyphicon-wrench',
+		image : 'interface.png',
 		data : [
 			{
 				name : 'Sublime',
 				experience : 24,
-				image : './images/sublime.png'
+				image : 'sublime.png',
+				website : 'https://www.sublimetext.com/',
+				text : 'Awsome and simple editor. The closest you can get to an IDE at such a low size'
 			},
 			{
 				name : 'Git',
 				experience : 24,
-				image : './images/git.png'
+				image : 'git.png',
+				website : 'https://git-scm.com/',
+				text : 'Ofcourse, there is SVN, Perforce etc. But git takes repository management to another level'
 			},
 			{
 				name : 'Eclipse',
 				experience : 24,
-				image : './images/eclipse.png'
+				image : 'eclipse.png',
+				website:'https://eclipse.org/',
+				text : 'The most popular and free IDE that comes with long term support'
 			},
 			{
 				name : 'Jira',
 				experience : 24,
-				image : './images/jira.png'
+				image : 'jira.png',
+				website : 'https://www.atlassian.com/software/jira',
+				text : 'A very intuitive project management tool. Integrates with git easily'
 			},
 			{
 				name : 'Node',
 				experience : 12,
-				image : './images/node.png'
+				image : 'node.png',
+				website : 'https://nodejs.org/',
+				text : 'Node has made javascript even more powerful. With npm its a breeze to use libraries'
+			},
+			{
+				name : 'Developer Tools',
+				experience : 12,
+				image : 'chrome.png',
+				website : 'https://developers.google.com/web/tools/chrome-devtools/?hl=en',
+				text : 'Firefox or chrome : Its always a personal choice. Being a UI developer you need to pick yours'
 			}
 		]
 	},
@@ -97,6 +131,7 @@ var resume_data = {
 		title : 'Technologies',
 		description : 'I work with the below technologies',
 		icon : 'glyphicon-phone',
+		image : 'interface.png',
 		data : [
 			{
 				name : 'Java',
@@ -146,7 +181,8 @@ var resume_data = {
 	},
 	education : {
 		title : 'Education',
-		description : 'Education',
+		description : 'The best source of knowledge is always experience. Nevertheless, here is a brief history about my formal education. ',
+		menu : true,
 		icon : 'glyphicon-education',
 		data : [
 			{
@@ -154,21 +190,21 @@ var resume_data = {
 				description : 'BE in Computer Science from RGPV Bhopal',
 				degree : 'Bachelor of Engineering',
 				percentage : 70.7,
-				image : '/images/education/pic1.jpg'
+				image : 'degree.png'
 			},
 			{
 				year : 2007,
 				description : '12th from Kendriya Vidyalaya Jabalpur',
 				degree : 'Higher Secondary School',
 				percentage : 80.4,
-				image : '/images/education/pic2.jpg'
+				image : 'degree.png'
 			},
 			{
 				year : 2005,
 				description : '10th from Army School Mathura Cantt',
 				degree : 'High School',
 				percentage : 85.2,
-				image : '/images/education/pic3.jpg'
+				image : 'degree.png'
 			},
 		]
 	},
@@ -196,27 +232,16 @@ var resume_data = {
 		]
 	},
 	projects : {
-		title : 'Projects',
-		description : 'Projects I have worked on',
+		title : 'Portfolio',
+		description : 'I have worked on a variety of projects with different domains. With each new project you get a new set of challenging problems.',
 		icon : 'glyphicon-shopping-cart',
+		menu :true,
 		data : [
 			{
-				projectName : 'Online portfolio',
-				description : 'An online portfolio to showcase my skills',
-				image : './images/projects/pic1.jpg',
-				responsibilities : [
-					'Single Page app to showcase my work and skills',
-					'Using marionette to create the whole application',
-					'Deployed on free hosting',
-					'Used bootstrap for responsive design and inbuilt styles',
-					'Optimizing and ugly-fying code for deployment with r.js'
-				],
-				duration : 12
-			},
-			{
-				projectName : 'Ecommerce Web Portal',
-				description : 'Ecommerce Web portal',
-				image : './images/projects/pic2.jpg',
+				id : 1,
+				projectName : 'Supply Chain Product',
+				description : 'Complete supply chain management from order to shipment',
+				image : 'warehouse.jpg',
 				responsibilities : [
 					'Developing standalone widgets on Liferay portal with Backbone.js',
 					'Using backbone channels to communicate between different widgets',
@@ -228,9 +253,39 @@ var resume_data = {
 				duration : 12
 			},
 			{
+				id : 2,
+				projectName : 'Online portfolio',
+				description : 'A small project to keep my online presence',
+				image : 'portfolio.png',
+				responsibilities : [
+					'Single Page app to showcase my work and skills',
+					'Using marionette to create the whole application',
+					'Deployed on free hosting',
+					'Used bootstrap for responsive design and inbuilt styles',
+					'Optimizing and ugly-fying code for deployment with r.js'
+				],
+				duration : 12
+			},
+			{
+				id : 3,
+				projectName : 'Ecommerce Web Portal',
+				description : 'A Liferay based configurable ecommerce platform',
+				image : 'shopping.jpg',
+				responsibilities : [
+					'Developing standalone widgets on Liferay portal with Backbone.js',
+					'Using backbone channels to communicate between different widgets',
+					'Using Git as code repository to checkout and commit code changes',
+					'Consuming Rest Services to fetch and update data via web services',
+					'Developing widgets using Ajile methodology with jira',
+					'Implementing responsive design with css and javascript'
+				],
+				duration : 12
+			},
+			{
+				id : 4,
 				projectName : 'Customer Data Management Application',
 				description : 'Banking',
-				image : './images/projects/pic3.jpg',
+				image : 'banking.jpg',
 				responsibilities : [
 					'Provide solution to Client for production issues according to the defined SLA',
 					'Coordinating with different teams from other vendors for providing quick solution',
@@ -240,45 +295,19 @@ var resume_data = {
 				],
 				duration : 24
 			},
-			{
-				projectName : 'Initial Corporate Training',
-				description : 'Training',
-				image : './images/projects/pic4.jpg',
-				responsibilities : [
-					'Training program in IBM Mainframes and DB2',
-					'End to End Project development and delivery training'
-				],
-				duration : 3
-			},
-			{
-				projectName : 'Online Examination System',
-				description : 'College',
-				image : './images/projects/pic5.jpg',
-				responsibilities : [
-					'Intranet based Online examination system in JSP and servlets'
-				],
-				duration : 1
-			},
-			{
-				projectName : 'Library Management System',
-				description : 'College',
-				image : './images/projects/pic6.jpg',
-				responsibilities : [
-					'Desktop Application for Library Management in Visual Basic'
-				],
-				duration : 1
-			},
 		]
 	},
 	contact : {
 		title : 'Contact',
-		description : 'Contact',
+		description : 'In case you want to reach me...',
+		menu: true,
 		icon : './images/contact.jpg',
+		subTitle : 'My contact channels',
+		text : 'Preferred channel would be email',
 		data : {
-			name : 'Amit Upadhyay',
 			email : 'abcd@gmail.com',
 			phone : '9812121212',
-			text : 'Sample Text'
+			text : 'PB 301 India'
 		}
 
 	}

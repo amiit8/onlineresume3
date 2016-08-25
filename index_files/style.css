@@ -1,0 +1,319 @@
+
+
+/*Reset some basic default styling*/
+*{
+	font-family: 'Raleway', sans-serif;
+}
+ul{
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+a{
+	color: orange;
+}
+
+a:hover{
+	color: #FFEE00;
+}
+a:focus{
+	color: #FF9000 ;
+}
+
+h3{
+	line-height: 40px;
+}
+
+
+.background{
+	background-image: url('../images/bg.jpg');
+	background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner{
+	color: white;
+}
+
+.banner .blank-div{
+	height: 100px;
+	width: 100%;
+}
+#banner-container {
+	/*height: 650px;*/
+	padding-top: 100px;
+}
+
+.profile-image img{
+	height: 200px;
+  width: 200px;
+  border-radius: 109px;
+  border: 3px solid #eee;
+  cursor: pointer;
+}
+
+.profile-image img{
+	box-shadow: 0px 5px 20px black;
+}
+
+.name.header{
+	font-size: 4em;
+
+}
+
+.menu{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+
+}
+
+.menu a{
+		font-family: 'Josefin Sans', sans-serif;
+}
+
+section .container .heading {
+  margin-top: 70px;
+}
+
+#summary{
+	padding-top: 50px;
+}
+
+#summary .slides img{
+	height: 150px;
+	width: 150px;	
+}
+
+#summary .heading{
+	margin-bottom: 100px;
+}
+
+.navbar.navbar-inverse
+{
+	margin-bottom: 0;
+	background-color: rgba(0,0,0,.8);
+	transition: all 1s;
+}
+
+.sticky-menu{
+	right: 0;
+	left: 0;
+}
+
+#menu.fixed{
+	top:0;
+	bottom:inherit;
+}
+
+#menu .navbar-brand{
+	display: none;
+}
+
+.fixed .navbar-nav{
+	padding:0;
+}
+
+.fixed .navbar-inverse {
+   background-color: #222;
+   /*box-shadow: 0px 3px 10px;*/
+   
+}
+.navbar{
+	border:0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.navbar-nav{
+	transition: .3s all;
+	text-align: center;
+	float: none;
+	display: inline-block;
+  /*padding: 10px;*/
+}
+
+.navbar-inverse .navbar-nav li a:focus{
+	color: #9d9d9d;
+}
+.navbar-inverse .navbar-nav li a{
+	font-size: 20px;
+}
+
+.navbar-inverse .navbar-nav li a:hover{
+	background-color: orange;
+}
+.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus{
+	background-color: orange;
+}
+
+.skills-image img{
+	width: 100%;
+}
+
+.toolset-image img{
+	height: 100px;
+	width: 100px;
+	padding: 5px;
+}
+
+.toolset-image img:hover {
+  border: 2px solid black;
+  opacity: .8;
+}
+
+.grid .card{
+  height: 350px;
+  padding: 15px;
+  margin-top: 15px;
+  background: black;
+  overflow:hidden;
+  cursor: pointer;
+}
+
+.grid .card .image{
+	transition: all .3s;
+	height: 70%;
+	overflow: hidden;
+}
+
+@media screen and (min-width: 768px){
+	.grid .card .image{
+		height: 100%;
+	}
+	.grid .card:hover .image{
+		height: 70%;
+	}
+}
+
+.grid .caption{
+  /* background-color: black; */
+  padding-top: 10px;
+  color: #ddd;
+}
+.grid .card img{
+	width: 100%;
+	
+	
+}
+
+#contact form{
+	margin-top: 50px;
+}
+
+input.contact{
+  background: #fff;
+  border: solid 1px #ddd;
+  color: #000;
+  padding: 15px 30px;
+  
+  margin-bottom: 30px;
+  outline: none;
+ }
+
+.contact.submit{
+	background: #333;
+  font-family: 'Montserrat',sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0px;
+  border: none !important;
+  border-radius: 3px;
+ }
+
+ textarea.contact{
+ 	background: #fff;
+  color: #000;
+  border: solid 1px #ddd;
+  padding: 15px 30px;
+  margin-bottom: 40px;
+  outline: none;
+  height: 150px;
+ }
+
+#footer{
+	background: orange;
+	margin-top: 120px;
+	position: relative;
+	
+}
+
+#footer .container{
+  padding: 60px 0 20px;
+}
+
+#footer a{
+	color: white;
+}
+#footer p {
+  color: #fff;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: center;
+  /*text-transform: uppercase;*/
+}
+
+#footer .glyphicon-chevron-up{
+	position: absolute;
+	top: -50px;
+	border: 1px solid orange;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#footer .glyphicon-chevron-up:hover{
+	background-color: orange;
+}
+
+#slideshow{
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+}
+
+#slideshow .image-container{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: 100%;
+}
+#slideshow img{
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 768px){
+	#slideshow .image-container{
+		height: 50%;
+	}
+}
+
+#slideshow .button.close{
+	position: absolute;
+  right: 30px;
+  top: 70px;
+  color: white;
+  z-index: 999;
+  opacity: 1;
+}
+.slideshow-container .wrapper{
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ddd;
+	overflow: auto;
+	height: 75%;
+	width: 80%;
+	background-color: black;
+	color: white;
+	position: relative;
+}
