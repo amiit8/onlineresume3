@@ -3,6 +3,7 @@
 /*Reset some basic default styling*/
 *{
 	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
 }
 ul{
 	padding: 0;
@@ -11,11 +12,14 @@ ul li{
 	list-style: none;
 }
 a{
-	color: orange;
+	color: #FF6600;
+	/*font-weight: bold;*/
 }
 
 a:hover{
-	color: #FFEE00;
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
 }
 a:focus{
 	color: #FF9000 ;
@@ -25,6 +29,7 @@ h3{
 	line-height: 40px;
 }
 
+/*CSS Loader to be shown */
 #loader{
 	position: fixed;
 	background-color: #000;
@@ -111,6 +116,7 @@ h3{
 
 .menu a{
 		font-family: 'Josefin Sans', sans-serif;
+		font-weight: normal;
 }
 
 section .container .heading {
@@ -262,6 +268,10 @@ input.contact{
   margin: 0px;
   border: none !important;
   border-radius: 3px;
+ }
+ .contact.submit:hover{
+ 	background-color: orange;
+ 	/*color: orange;*/
  }
 
  textarea.contact{

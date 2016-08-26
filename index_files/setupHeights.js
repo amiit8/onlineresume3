@@ -11,8 +11,8 @@ $(document).ready( function(){
 	// loader.fadeOut();
 });
 
+// Hide the loader when everything gets downloaded
 window.onload = function(){
 	var loader = $('#loader');
 	loader.fadeOut();
-	console.log('hiding');
 };

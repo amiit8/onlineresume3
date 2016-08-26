@@ -24,21 +24,21 @@ var resume_data = {
 			slides : [
 				{
 					link:'#',
-					title: 'HTML 5',
-					image: './images/html5.png',
-					description: 'HTML is the thing'
+					title: 'Responsive Design',
+					image: './images/responsive.png',
+					description: 'Your Website should be flexible enough to perfectly fit across all types of mobiles/tablets/laptops or desktops. There are several frameworks which helps you to support responsive design. One of the most widely used among them is <a href="http://www.getbootstrap.com">Bootstrap</a> which I have also used for this website.'
 				},
 				{
 					link:'#',
-					title: 'Javascript',
-					image: './images/javascript.png',
-					description: 'Javascript'
+					title: 'Browser Compatibility',
+					image: './images/browsers2.png',
+					description: 'You never know what browser the customer would use to open your website. Especially when your site is on internet. There are several mechanisms which would allow you to write code that would work same on most of the browsers. Still there would be minor differences across them as the browsers implemention of <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">Ecmascript</a> differs.'
 				},
 				{
 					link:'#',
 					title: 'Frameworks',
-					image: './images/marionette.png',
-					description: 'JS Frameworks'
+					image: './images/backbone.png',
+					description: 'From a tiny library like <a href="http://backbonejs.org/">Backbone</a> to heavy weight <a href="https://www.sencha.com/products/extjs/">Extjs</a>, there are many JS frameworks. Although internally all of them finally use core Javascript, but saves you a lot of time to write the same code again and again. Libraries such as <a href="https://jquery.com/">JQuery</a> are so popular that sometimes $ seems to be a default part of javascript for the beginners.'
 				},
 
 			]
@@ -245,7 +245,7 @@ var resume_data = {
 				responsibilities : [
 					'The product enables the customer(basically large enterprises) to manage their stocks efficiently and also decrease wastage using several mechanisms such as forecasting',
 					'The appliction uses java services as a backend.',
-					'My role in this project was to create User Interfaces using ExtJS and company developed platform. For different clients the application needs to be customnized to adhere to their requirements.'
+					'My role in this project was to create User Interfaces using ExtJS on top of company developed platform. For different clients the application needs to be customized to adhere to their requirements.'
 				],
 				duration : 12
 			},
@@ -280,11 +280,8 @@ var resume_data = {
 				description : 'Banking',
 				image : 'banking.jpg',
 				responsibilities : [
-					'Provide solution to Client for production issues according to the defined SLA',
-					'Coordinating with different teams from other vendors for providing quick solution',
-					'Responsible for Incident/Change/Problem management',
-					'Provide patches/enhancement as per customer request',
-					'Responsible for availability of the application in Business hours'
+					'This project was a banking application for the employees of the bank. The front-end for the application used xslt to convert generated xml to jsp pages.',
+					'My role was to customize the Java services and front-end JSP pages according to the customer\'s requirements. The challenge here was to modify the code without breaking other existing functionalities.'
 				],
 				duration : 24
 			},
@@ -295,12 +292,12 @@ var resume_data = {
 		description : 'In case you want to reach me...',
 		menu: true,
 		icon : './images/contact.jpg',
-		subTitle : 'My contact channels',
-		text : 'Preferred channel would be email',
+		subTitle : 'A lot of ways to connect these days',
+		text : '',
 		data : {
-			email : 'abcd@gmail.com',
-			phone : '9812121212',
-			text : 'PB 301 India'
+			email : 'amiit8@gmail.com',
+			phone : 'Phone number on request',
+			text : 'Pune India'
 		}
 
 	}
