@@ -1,3 +1,12 @@
+
+<!-- 
+/**************************************
+	 	Website : www.amitupadhyay.in
+		Author : Aamit Upadhyay
+	 	Email : amiit8@gmail.com
+***************************************/
+ -->
+
 <html>
 	<head>
 		<title>Amit Upadhyay - UI Developer Portfolio</title>
@@ -124,7 +133,7 @@
 							<img src="<%= data.profileImage %>" />
 						</a>
 						<div class="profile-data">
-							<div class="name header"><%= data.name %></div>
+							<div id="name-scroller" class="name header"><%= data.name %></div>
 						</div>
 					</div>
 				</div>
@@ -185,11 +194,11 @@
 									<div class="skill-wrapper">
 										<!-- <img class="image" src="<%= item.image %>"></img> -->
 										<h4 class="skill-name"><%= item.name %></h4>
-										<h5 class="experience"><%= item.experience %> months </h5>	
+										<h5 class="experience"><%= item.description %> </h5>	
 				
 										<% if(item.proficiency){ %>
 										<div class="progress">
-										  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= item.proficiency %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= item.proficiency %>%"></div>
+										  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<%= item.proficiency %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= item.proficiency %>%"></div>
 										</div>
 										<% } %>
 									</div>	
@@ -338,7 +347,9 @@
 				</div>
 				<div class="container">
 				<div class="row">
-					<div class="col-md-6">Map</div>
+					<div class="col-md-6">
+						<div id="map"></div>
+					</div>
 					<div class="col-md-6">
 						<h4><%= subTitle %></h4>
 						<h5><%= text %></h5>
@@ -388,9 +399,12 @@
 			<script type="text/javascript" src="./lib/jquery.js"></script>
 			<script type="text/javascript" src="./lib/backbone.js"></script>
 			<script type="text/javascript" src="./lib/bootstrap.min.js"></script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUfSn-LdZo_zsbBSDR_FO-aZQnjHd2VWE&callback=initMap"></script>
 
 			<!-- Finally load the project scripts after all other scripts are downloaded -->
 
+			<!-- Setup Google Maps -->
+			<script type="text/javascript" src="./scripts/googlemaps.js"></script>
 			<!-- Complete data available as json object -->
 			<script type="text/javascript" src="./scripts/resumeData.js"></script>
 

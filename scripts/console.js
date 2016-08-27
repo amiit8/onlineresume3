@@ -1,4 +1,10 @@
 
+/**************************************
+	 	Website : www.amitupadhyay.in
+		Author : Aamit Upadhyay
+	 	Email : amiit8@gmail.com
+***************************************/
+
 /* Information to be displayed in console
  * Thoughts taken from http://www.oneliners-and-proverbs.com/engels/computer.html
  */

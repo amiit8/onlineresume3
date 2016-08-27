@@ -1,4 +1,10 @@
 
+/**************************************
+	 	Website : www.amitupadhyay.in
+		Author : Aamit Upadhyay
+	 	Email : amiit8@gmail.com
+***************************************/
+
 // This script converts the raw json data to html dom using backbone and underscore. 
 // The views do not contain any functionality here
 // The purpose of using backbone here is to generate the html markup from json

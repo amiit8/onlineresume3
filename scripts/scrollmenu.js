@@ -1,4 +1,10 @@
 
+/**************************************
+	 	Website : www.amitupadhyay.in
+		Author : Aamit Upadhyay
+	 	Email : amiit8@gmail.com
+***************************************/
+
 
 // This script enables the application to update the menu items on document scroll event
 // Whenever the document is scrolled the below event will get triggered. The key point is to read the 
@@ -64,6 +70,9 @@ $(document).ready(function(){
 			menu.removeClass('fixed');
 			menuItems.removeClass('active');
 			menu.find('.navbar-brand').fadeOut();
+			if(bodyScrollPosition === 0){
+				tick = 0;
+			}
 		}
 	});
 });

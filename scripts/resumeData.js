@@ -1,4 +1,10 @@
 
+/**************************************
+	 	Website : www.amitupadhyay.in
+		Author : Aamit Upadhyay
+	 	Email : amiit8@gmail.com
+***************************************/
+
 
 // Complete data available in one variable
 var resume_data = {
@@ -46,33 +52,37 @@ var resume_data = {
 	},
 	skills : {
 		title : 'Skills',
-		description : 'Learning never ends. There will always be something that you need to learn. I find myself working with these..',
+		description : 'Learning never ends. You always endup with something that\'s new for you. At this point of time I find myself comfortable with',
 		menu : true,
 		icon : 'glyphicon-briefcase',
-		image : 'skills.jpg',
+		image : 'code2.jpg',
 		data : [
 			{
 				name : 'Javascript',
 				proficiency : 90,
 				experience : 24,
+				description : 'Technically the standard is ECMAScript, nevertheless javascript is still popular',
 				image : './images/javascript.png'
 			},
 			{
 				name : 'Html',
 				proficiency : 75,
 				experience : 36,
+				description : 'HTML5 brings the best of browsers without external libraries',
 				image : './images/html.png'
 			},
 			{
 				name : 'Css',
 				proficiency : 70,
 				experience : 24,
+				description : 'CSS3 gives you more power using transform/transitions/animations.',
 				image : './images/css.png'
 			},
 			{
-				name : 'SQL',
+				name : 'Java',
 				proficiency : 70,
 				experience : 24,
+				description : 'Java lets you understand the backend data services.',
 				image : './images/sql.png'
 			},
 		]
@@ -277,7 +287,7 @@ var resume_data = {
 			{
 				id : 4,
 				projectName : 'Customer Data Management Application',
-				description : 'Banking',
+				description : 'Banking Application',
 				image : 'banking.jpg',
 				responsibilities : [
 					'This project was a banking application for the employees of the bank. The front-end for the application used xslt to convert generated xml to jsp pages.',
