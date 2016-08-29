@@ -1,4 +1,10 @@
 
+/**************************************
+	 	Website : www.amitupadhyay.in
+		Author : Aamit Upadhyay
+	 	Email : amiit8@gmail.com
+***************************************/
+
 // The script adds functionality to the cards to open modal slides
 
 $(document).ready(function(){

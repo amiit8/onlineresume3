@@ -1,4 +1,10 @@
 
+/**************************************
+	 	Website : www.amitupadhyay.in
+		Author : Aamit Upadhyay
+	 	Email : amiit8@gmail.com
+***************************************/
+
 
 /*Reset some basic default styling*/
 *{
@@ -212,12 +218,27 @@ section .container .heading {
 	width: 100%;
 }
 
+#skills .skill{
+	padding: 10px;
+}
+#skills .skill:hover{
+	background-color: #eef;
+}
+
+#skills .progress{
+	height: 3px;
+	margin-bottom: 5px;
+}
+
 .toolset-image img{
 	height: 100px;
 	width: 100px;
 	padding: 5px;
 }
 
+#education .item:hover{
+	background-color: #eef;
+}
 .toolset-image img:hover {
   border: 2px solid black;
   opacity: .8;
@@ -225,11 +246,12 @@ section .container .heading {
 
 .grid .card{
   height: 350px;
-  padding: 15px;
+  
   margin-top: 15px;
   background: black;
   overflow:hidden;
   cursor: pointer;
+  border: 2px solid black;
 }
 
 .grid .card .image{
@@ -249,7 +271,7 @@ section .container .heading {
 
 .grid .caption{
   /* background-color: black; */
-  padding-top: 10px;
+  padding : 10px;
   color: #ddd;
 }
 .grid .card img{
@@ -262,6 +284,10 @@ section .container .heading {
 	margin-top: 50px;
 }
 
+#map{
+	width: 100%;
+	height: 300px;
+}
 input.contact{
   background: #fff;
   border: solid 1px #ddd;
