@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var container = $('#banner-animator').get(0);
 	// var context = container.get(0).getContext("2d");
-	var x,y,h,w;
+	
 
 	var getRandom = function(start,end){
 		var temp;
@@ -30,27 +30,38 @@ $(document).ready(function(){
 
 	// context.fillStyle = '#2d80ac';
 	// context.globalCompositeOperation='destination-over';
+	var boxGeneratorTimer = window.setInterval(generateRandomBox, 1000);
 
-	for(var i=0 ; i < 50 ; i++){
+	function generateRandomBox(){
+		var x,y,h,w,opacity;
 		x = getRandom(0,999);
 		y = getRandom(0,600);
-
 		h = getRandom(30,99);
 		w = h;
+		opacity = Math.random();
 		
 		box = document.createElement('div');
 		box.style.height = h;
 		box.style.width = w;
 		box.style.left = x;
 		box.style.top = y;
-		box.style.opacity = Math.random();
+		box.style.opacity = opacity;
 		box.className = 'box';
 		container.appendChild(box);
+		
 
 		(function autoBlur(boxComponent){
 			window.setTimeout(function(){
-				boxComponent.style.opacity = 0;
-			}, Math.random()*3000);
+				// boxComponent.parentNode.removeChild(boxComponent);
+				(function fadeBox(boxToFade){
+					boxToFade.style.opacity = 0;
+					(function removeBox(boxToRemove){
+						window.setTimeout(function(){
+							$(boxToRemove).remove();
+						},2000);
+					})(boxToFade);
+				})(boxComponent);
+			}, 2000);
 		})(box);
 	}
 });
